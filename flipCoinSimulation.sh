@@ -38,6 +38,37 @@ for (( i=0; i<n; i++ ))
 			;;
 	esac
 
+	t=$(( RANDOM%7 ))
+	case $t in
+		0)
+			hhh=$(($hhh+1))
+			;;
+		1)
+			hht=$(($hht+1))
+			;;
+		2)
+			hth=$(($hth+1))
+			;;
+		3)
+			htt=$(($htt+1))
+			;;
+		4)
+			thh=$(($thh+1))
+			;;
+		5)
+			tht=$(($tht+1))
+			;;
+		6)
+			tth=$(($tth+1))
+			;;
+		7)
+			ttt=$(($ttt+1))
+			;;
+		*)
+			echo "somethin went wrong"
+			;;
+	esac
+
 }
 echo "Number of head win "$head"
 echo "Number of tail win "$tail"
@@ -45,6 +76,7 @@ result[H]="$head"
 result[T]="$tail"
 echo "Dictionary : " ${result[@]}
 
+echo "---------------------------------------------------------------------------"
 
 echo "number of hh combination " $hh
 echo "number of ht combination " $ht
@@ -52,5 +84,16 @@ echo "number of th combination " $th
 echo "number of tt combination " $tt
 
 
+echo "----------------------------------------------------------------------------"
+echo "number of hhh combination " $hhh
+echo "number of hht combination " $hht
+echo "number of hth combination " $hth
+echo "number of htt combination " $htt
+echo "number of thh combination " $thh
+echo "number of tht combination " $tht
+echo "number of ttt combination " $ttt
+
+
 }
+
 flipCoinSimulation
